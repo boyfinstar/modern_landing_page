@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=3175b052d5bfc5be488243d782041ab9"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +22,8 @@
                 <span>PRO<span>
                         <span id="vita">VITA</span>
             </div>
-            <ul class="grid-35 prefix-20 tablet-grid-40 tablet-prefix-10 tablet-suffix-5 mobile-grid-60 mobile-prefix-30">
+            <ul
+                class="grid-35 prefix-20 tablet-grid-40 tablet-prefix-10 tablet-suffix-5 mobile-grid-60 mobile-prefix-30">
                 <li><a href="#" class="head">Home</a></li>
 
                 <li><a href="#" class="head">Blog</a></li>
@@ -46,7 +48,8 @@
                 <p id="article">Article</p>
                 <h1>IMPLEMENTING <br> RPA WITH CLARITY <br> & CONFIDENCE</h1>
                 <div class="grid-100 grid-parent">
-                    <span class="grid-80 prefix-10 tablet-grid-80 tablet-prefix-5" id="smalltypo">Surface uses various AI / ML techniques <br> to
+                    <span class="grid-80 prefix-10 tablet-grid-80 tablet-prefix-5" id="smalltypo">Surface uses various
+                        AI / ML techniques <br> to
                         capture and
                         analyze in-depth details
                         of <br> underlying process</span>
@@ -81,10 +84,33 @@
         <div class="grid-10 prefix-40 tablet-grid-10 tablet-prefix-40 arrow grid-parent">
 
             <div class="grid-50 tablet-grid-50 grid-parent"> <img class="arrow-left" src="img/arrow-left.svg"> </div>
-            <div class="grid-50 tablet-grid-50 grid-parent ra"> <img class="arrow-right" src="img/arrow-right.svg"> </div>
+            <div class="grid-50 tablet-grid-50 grid-parent ra"> <img class="arrow-right" src="img/arrow-right.svg">
+            </div>
 
         </div>
     </div>
+
+    <div id="openweathermap-widget-19"></div>
+    <script>
+        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+        window.myWidgetParam.push({
+            id: 19,
+            cityid: '2319133',
+            appid: '3175b052d5bfc5be488243d782041ab9',
+            units: 'metric',
+            mode: 'html',
+            containerid: 'openweathermap-widget-19',
+        });
+        (function () {
+            var script = document.createElement('script');
+            script.async = true;
+            script.charset = "utf-8";
+            script.src =
+                "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(script, s);
+        })();
+    </script>
 </body>
 
 </html>
